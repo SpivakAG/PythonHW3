@@ -2,7 +2,10 @@
 import re
 list = ['fvfvfdv', 'fdnbtrwwq', 'v7ryvf', 'fdv6fdh']
 
-for i in range(len(list)):
-    num = re.findall(r'\d+', list[i])
-    if num !=[]:
-        print(num)
+def FindNumber(array):
+    for i in range(len(array)):
+        num = re.findall(r'\d+', array[i])
+        if num !=[]:
+            return num
+
+print(FindNumber(list))
